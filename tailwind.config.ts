@@ -52,6 +52,8 @@ const config: Config = {
         grid: "grid 15s linear infinite",
         shimmer: "shimmer 8s infinite",
         aurora: "aurora 6s linear infinite",
+        typing: "typing linear",
+        "fade-in": "fade-in 0.5s ease-out forwards",
       },
       keyframes: {
         aurora: {
@@ -116,6 +118,14 @@ const config: Config = {
         rainbow: {
           "0%": { "background-position": "0%" },
           "100%": { "background-position": "200%" },
+        },
+        typing: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
       },
     },
