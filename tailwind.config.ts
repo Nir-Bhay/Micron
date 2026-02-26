@@ -16,9 +16,16 @@ const config: Config = {
         "accent-secondary": "var(--accent-secondary)",
         "accent-success": "var(--accent-success)",
         "accent-warning": "var(--accent-warning)",
-        "text-primary": "var(--text-primary)",
-        "text-secondary": "var(--text-secondary)",
-        "text-tertiary": "var(--text-tertiary)",
+        // Map text color tokens to utility classes
+        primary: "var(--accent-primary)", // Default primary color (e.g. for bg-primary)
+        secondary: "var(--accent-secondary)",
+        tertiary: "var(--text-tertiary)",
+      },
+      textColor: {
+        // Override text utilities to use text tokens
+        primary: "var(--text-primary)",
+        secondary: "var(--text-secondary)",
+        tertiary: "var(--text-tertiary)",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "sans-serif"],
@@ -45,6 +52,8 @@ const config: Config = {
         grid: "grid 15s linear infinite",
         shimmer: "shimmer 8s infinite",
         aurora: "aurora 6s linear infinite",
+        typing: "typing linear",
+        "fade-in": "fade-in 0.5s ease-out forwards",
       },
       keyframes: {
         aurora: {
@@ -109,6 +118,14 @@ const config: Config = {
         rainbow: {
           "0%": { "background-position": "0%" },
           "100%": { "background-position": "200%" },
+        },
+        typing: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
       },
     },
