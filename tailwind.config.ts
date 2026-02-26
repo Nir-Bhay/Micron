@@ -16,9 +16,16 @@ const config: Config = {
         "accent-secondary": "var(--accent-secondary)",
         "accent-success": "var(--accent-success)",
         "accent-warning": "var(--accent-warning)",
-        "text-primary": "var(--text-primary)",
-        "text-secondary": "var(--text-secondary)",
-        "text-tertiary": "var(--text-tertiary)",
+        // Map text color tokens to utility classes
+        primary: "var(--accent-primary)", // Default primary color (e.g. for bg-primary)
+        secondary: "var(--accent-secondary)",
+        tertiary: "var(--text-tertiary)",
+      },
+      textColor: {
+        // Override text utilities to use text tokens
+        primary: "var(--text-primary)",
+        secondary: "var(--text-secondary)",
+        tertiary: "var(--text-tertiary)",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "sans-serif"],
