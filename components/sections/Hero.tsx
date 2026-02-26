@@ -1,7 +1,6 @@
 import { Play, ShieldCheck } from "lucide-react";
 import { RetroGrid } from "@/components/ui/RetroGrid";
 import { AnimatedShinyText } from "@/components/ui/AnimatedShinyText";
-import { AuroraText } from "@/components/ui/AuroraText";
 import { ShimmerButton } from "@/components/ui/ShimmerButton";
 import { TextAnimate } from "@/components/ui/TextAnimate";
 import { BlurFade } from "@/components/ui/BlurFade";

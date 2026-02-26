@@ -16,7 +16,6 @@ interface TextAnimateProps {
 
 export function TextAnimate({
   text,
-  type = "blurInUp", // currently only supports blurInUp as per blueprint
   by = "word",
   className,
   delay = 0,
