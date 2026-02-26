@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --bg-page: oklch(0.13 0.02 260);
+  --bg-card: oklch(0.16 0.02 260);
+  --bg-card-hover: oklch(0.19 0.02 260);
+  --accent-primary: oklch(0.65 0.25 250);
+  --accent-secondary: oklch(0.65 0.22 310);
+  --accent-success: oklch(0.72 0.20 155);
+  --accent-warning: oklch(0.78 0.18 80);
+  --text-primary: oklch(0.93 0.01 260);
+  --text-secondary: oklch(0.65 0.02 260);
+  --text-tertiary: oklch(0.45 0.02 260);
+
+  /* Glows */
+  --glow-blue: oklch(0.65 0.25 250 / 0.25);
+  --glow-purple: oklch(0.65 0.22 310 / 0.20);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  --gradient-sunset: linear-gradient(135deg, #ffaa40, #9c40ff);
+  --gradient-success: linear-gradient(135deg, var(--accent-success), var(--accent-primary));
+
+  /* Spacing */
+  --section-padding-y: clamp(5rem, 10vh, 8rem);
+  --container-max: 1280px;
+  --container-padding-x: clamp(1rem, 4vw, 2rem);
+  --card-border-radius: 16px;
+  --card-padding: 24px;
+  --grid-gap: 16px;
+  --card-row-height: 22rem;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --accent-glow-p3: color(display-p3 0.4 0.2 0.9 / 0.3);
+  }
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Global Focus Styles */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Utilities */
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(24px) saturate(1.5);
+  border: 1px solid oklch(1 0 0 / 0.06);
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.04), 0 -20px 80px -20px rgba(255,255,255,0.06) inset;
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: var(--gradient-hero);
+}
