@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { Features } from "@/components/sections/Features";
+import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <SocialProof />
       <Features />
+      <Contact />
     </main>
   );
 }
